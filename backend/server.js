@@ -4,7 +4,13 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 require('dotenv').config();
 const app = express();
-app.use(cors());
+
+// ✅ CORS setup
+app.use(cors({
+  origin: "https://recipebookapp-gqpz.onrender.com",  // frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // MongoDB Atlas connection
