@@ -42,6 +42,10 @@ const Order = mongoose.model("Order", new mongoose.Schema({
 
 // Routes
 // Categories
+app.get("/", (req, res) => {
+  res.send("🍔 Online Food Delivery Backend is running!");
+});
+
 app.post("/categories", async (req, res) => {
     const category = new Category(req.body);
     await category.save();
