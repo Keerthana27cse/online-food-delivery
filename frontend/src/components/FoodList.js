@@ -48,7 +48,7 @@ function FoodList({ cart, setCart }) {
       <div
     className="container my-4"
     style={{
-      backgroundImage: `url("public/images/bg.jpg")`,
+      backgroundImage: `url("/images/bg.jpg")`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       minHeight: '100vh',
