@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.food-list-bg {
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

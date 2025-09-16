@@ -43,7 +43,7 @@ function FoodList({ cart, setCart }) {
   };
 
   return (
-    <div className="container my-4">
+    <div className="container my-4 food-list-bg">
       <div className="row">
         {foods.length === 0 ? (
           <p>Loading food items...</p>
