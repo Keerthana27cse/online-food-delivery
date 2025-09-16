@@ -5,6 +5,8 @@ import FoodList from "./components/FoodList";
 import Cart from "./components/Cart";
 import OrderStatus from "./components/OrderStatus";
 import AdminPanel from "./components/AdminPanel";
+import './App.css';  // or the correct CSS file path
+
 
 function App() {
   const [cart, setCart] = useState([]);
