@@ -5,12 +5,14 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function FoodList({ cart, setCart }) {
   const [foods, setFoods] = useState([]);
-
-  useEffect(() => {
-    axios.get(`${API_URL}/foods`)
-      .then(res => setFoods(res.data))
-      .catch(err => console.error("Error fetching foods:", err));
-  }, []);
+useEffect(() => {
+  axios.get(`${API_URL}/foods`)
+    .then(res => {
+      console.log("Fetched foods:", res.data);
+      setFoods(res.data);
+    })
+    .catch(err => console.error("Error fetching foods:", err));
+}, []);
 
   const addToCart = (food) => {
     setCart([...cart, { ...food, qty: 1 }]);
