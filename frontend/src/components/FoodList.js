@@ -22,7 +22,7 @@ function FoodList({ cart, setCart }) {
             <img src={food.image} className="card-img-top" alt={food.name} />
             <div className="card-body">
               <h5 className="card-title">{food.name}</h5>
-              <p className="card-text">${food.price}</p>
+              <p className="card-text">📍{food.price}</p>
               <button className="btn btn-primary" onClick={() => addToCart(food)}>
                 Add to Cart
               </button>
