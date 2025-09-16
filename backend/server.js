@@ -7,7 +7,7 @@ const app = express();
 
 // ✅ CORS setup
 app.use(cors({
-  origin: "https://recipebookapp-gqpz.onrender.com",  // frontend domain
+  origin: "https://online-food-delivery-frontend-sovx.onrender.com",  // frontend domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
