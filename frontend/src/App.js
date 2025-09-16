@@ -11,6 +11,14 @@ function App() {
   const [cart, setCart] = useState([]);
 
   return (
+     <div
+      style={{
+        backgroundImage: 'url("/images/bg.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+      }}
+    >
     <Router>
       <NavBar cart={cart} />
       <div className="container mt-3">
@@ -22,6 +30,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </div>
   );
 }
 

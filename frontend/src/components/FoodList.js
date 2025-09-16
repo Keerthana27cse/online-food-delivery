@@ -45,15 +45,7 @@ function FoodList({ cart, setCart }) {
   };
 
   return (
-      <div
-    style={{
-      backgroundImage: `url("/images/bg.jpg")`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      minHeight: '100vh',
-    }}
-  >
-    <div className="container my-4 food-list-bg">
+    <div className="container my-4">
       <div className="row">
         {foods.length === 0 ? (
           <p>Loading food items...</p>
@@ -109,7 +101,6 @@ function FoodList({ cart, setCart }) {
           ))
         )}
       </div>
-    </div>
     </div>
   );
 }
