@@ -22,6 +22,14 @@ function Cart({ cart, setCart }) {
 
   return (
     <div>
+        <div
+      style={{
+        backgroundImage: 'url("/images/bg-2.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+      }}
+    >
       <h3>Your Cart</h3>
       {cart.length === 0 ? (
         <p>No items in cart.</p>
@@ -52,6 +60,7 @@ function Cart({ cart, setCart }) {
           Order placed! Your Order ID: {orderPlaced._id}
         </div>
       )}
+    </div>
     </div>
   );
 }
