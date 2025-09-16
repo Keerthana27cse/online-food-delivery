@@ -46,7 +46,6 @@ function FoodList({ cart, setCart }) {
 
   return (
       <div
-    className="container my-4"
     style={{
       backgroundImage: `url("/images/bg.jpg")`,
       backgroundSize: 'cover',
