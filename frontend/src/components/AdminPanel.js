@@ -44,6 +44,16 @@ function AdminPanel() {
         <input className="form-control mb-2" placeholder="Image URL" value={newFood.image} onChange={(e) => setNewFood({...newFood, image: e.target.value})} />
         <button className="btn btn-primary" onClick={addFood}>Add Food</button>
       </div>
+      <h5>Food List</h5>
+<ul className="list-group mb-4">
+  {foods.map(food => (
+    <li key={food._id} className="list-group-item">
+      <strong>Name:</strong> {food.name} <br />
+      <strong>Category:</strong> {food.category} <br />
+      <strong>Price:</strong> ${food.price}
+    </li>
+  ))}
+</ul>
 
       <h5>Orders</h5>
       <ul className="list-group">
