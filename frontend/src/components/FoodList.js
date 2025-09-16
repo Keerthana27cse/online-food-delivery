@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './App.css';  // or the correct CSS file path
+
 
 const API_URL = process.env.REACT_APP_API_URL;
 
