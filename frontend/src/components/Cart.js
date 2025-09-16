@@ -21,7 +21,6 @@ function Cart({ cart, setCart }) {
   };
 
   return (
-    <div>
         <div
       style={{
         backgroundImage: 'url("/images/bg-2.png")',
@@ -60,7 +59,6 @@ function Cart({ cart, setCart }) {
           Order placed! Your Order ID: {orderPlaced._id}
         </div>
       )}
-    </div>
     </div>
   );
 }
