@@ -1,0 +1,8 @@
+/* FoodList.css */
+.food-list-bg {
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
