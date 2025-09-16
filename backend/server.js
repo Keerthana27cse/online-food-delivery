@@ -95,6 +95,30 @@ app.put("/orders/:id/payment", async (req, res) => {
     const order = await Order.findByIdAndUpdate(req.params.id, { paymentStatus: "Paid" }, { new: true });
     res.json(order);
 });
+// Delete a food by ID
+app.delete("/foods/:id", async (req, res) => {
+  try {
+    await Food.findByIdAndDelete(req.params.id);
+    res.sendStatus(204); // Success, no content
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete food" });
+  }
+});
+
+// Update a food by ID
+app.put("/foods/:id", async (req, res) => {
+  try {
+    const updatedFood = await Food.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(updatedFood);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update food" });
+  }
+});
+
 
 // Start server
 app.listen(5000, () => console.log("Server running on port 5000"));
