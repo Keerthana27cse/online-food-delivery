@@ -16,22 +16,35 @@ function AdminPanel() {
     axios.get(`${API_URL}/foods`).then(res => setFoods(res.data));
     axios.get(`${API_URL}/orders`).then(res => setOrders(res.data));
   };
-
-  const addFood = async () => {
+const addFood = async () => {
+  try {
     await axios.post(`${API_URL}/foods`, newFood);
     setNewFood({ name: "", category: "", price: "", image: "" });
     fetchData();
-  };
-
-  const updateStatus = async (id, status) => {
+  } catch (error) {
+    console.error("Error adding food:", error);
+    alert("Failed to add food. Please check console for details.");
+  }
+};
+const updateStatus = async (id, status) => {
+  try {
     await axios.put(`${API_URL}/orders/${id}/status`, { status });
     fetchData();
-  };
+  } catch (error) {
+    console.error("Error updating order status:", error);
+    alert("Failed to update status.");
+  }
+};
 
-  const markPaid = async (id) => {
+const markPaid = async (id) => {
+  try {
     await axios.put(`${API_URL}/orders/${id}/payment`);
     fetchData();
-  };
+  } catch (error) {
+    console.error("Error marking payment as done:", error);
+    alert("Failed to mark paid.");
+  }
+};
 
   return (
     <div>
